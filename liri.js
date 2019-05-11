@@ -6,14 +6,11 @@ var axios = require("axios");
 var moment = require('moment');
 var fs = require("fs");
 
+
 var spotify = new Spotify(keys.spotify);
 
 var myCommand = process.argv[2];
-var myQuery = ""
-
-for (var x = 3; x < process.argv.length; x++) {
-    myQuery = myQuery + process.argv[x] + " ";
-};
+var myQuery = process.argv.slice(3).join(" ");
 
 fs.appendFileSync("log.txt", "\n\n"+"$ node liri.js "+myCommand+" "+myQuery, function(err) {
 
