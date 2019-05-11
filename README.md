@@ -25,15 +25,22 @@ Next the command line that was entered is writen to the file log.txt to reflect 
 
 Next the function runMyCommand is called.  This function is the brains of the app and determines which API to call based on the myCommand variable.  
 1. If myCommand is "concert-this", the app will return concert dates for the artist identified in the myQuery variable.
+
 **Example Input:** ![concert-this-input](https://github.com/mwclemons/liri-node-app/raw/master/images/concert-this-input.png)
-**Example Output:** ![concer-this-output](https://github.com/mwclemons/liri-node-app/raw/master/images/concert-this-out.png)
+**Example Output:** ![concert-this-output](https://github.com/mwclemons/liri-node-app/raw/master/images/concert-this-output.png)
+
 2. If myCommand is "spotify-this-song", the app will return details about the song identified in the myQuery variable.
+
 **Example Input:** ![spotify-this-song-input](https://github.com/mwclemons/liri-node-app/raw/master/images/spotify-this-song-input.png)
-**Example Output:** ![spotify-this-song-out](https://github.com/mwclemons/liri-node-app/raw/master/images/spotify-this-song-output.png)
+**Example Output:** ![spotify-this-song-output](https://github.com/mwclemons/liri-node-app/raw/master/images/spotify-this-song-output.png)
+
 3. If myCommand is "movie-this", the app will return details about the movie identified in the myQuery variable.
+
 **Example Input:** ![movie-this-input](https://github.com/mwclemons/liri-node-app/raw/master/images/movie-this-input.png)
 **Example Output:** ![movie-this-output](https://github.com/mwclemons/liri-node-app/raw/master/images/movie-this-output.png)
+
 4. If myCommand is "do-what-it-says", myCommand will be updated and myQuery will be defined by what is read from the random.txt file.  And runMyCommand will call itself.  When called again the app will run one of the above based on the updated value of myCommand and myQuery.
+
 **Example Input:** ![do-what-it-says-input](https://github.com/mwclemons/liri-node-app/raw/master/images/do-what-it-says-input.png)
 **Example Output:** *See above in 1,2, and 3*
 
