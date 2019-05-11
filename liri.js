@@ -6,7 +6,6 @@ var axios = require("axios");
 var moment = require('moment');
 var fs = require("fs");
 
-
 var spotify = new Spotify(keys.spotify);
 
 var myCommand = process.argv[2];
@@ -54,10 +53,14 @@ function runMyCommand() {
         spotify
             .search({ type: 'track', query: myQuery, limit: 1})
             .then(function(res) {
-                LogAndWrite(JSON.stringify(res.tracks.items[0].artists[0].name, null, 2));
-                LogAndWrite(JSON.stringify(res.tracks.items[0].name, null, 2));
-                LogAndWrite(JSON.stringify(res.tracks.items[0].preview_url, null, 2));
-                LogAndWrite(JSON.stringify(res.tracks.items[0].album.name, null, 2));
+                LogAndWrite("Artist Name: " + JSON.stringify(res.tracks.items[0].artists[0].name, null, 2));
+                LogAndWrite("Song Name: " + JSON.stringify(res.tracks.items[0].name, null, 2));
+                if (res.tracks.items[0].preview_url === null) {
+                    LogAndWrite("Preview Link: This song doesn't have a preview link.")
+                }else{
+                    LogAndWrite("Preview Link: " + JSON.stringify(res.tracks.items[0].preview_url, null, 2));
+                }
+                LogAndWrite("Album: " + JSON.stringify(res.tracks.items[0].album.name, null, 2));
             })
             .catch(function(err) {
                 LogAndWrite(err);
