@@ -1,6 +1,6 @@
 # liri-node-app
 
-##Assignment 
+**Assignment** 
 
 Make a command line node app that takes in parameters and based on the paramenters returns specific data from APIs.  
 There were 4 possible commands:
@@ -16,7 +16,8 @@ There were 4 possible commands:
 **Bonus** - have the application write the results of the command line inputs to the terminal and to a file called log.txt. 
 
 
-##Solution
+**Solution**
+
 First, I connected the app to all of the proper node packages using require statements.  This allowed the app to use the following packages: node-spotify-api, axios, moment and fs.  Next I added the logic.
 
 The first step in the logic was getting the search type and the value that was being searched for.  These values were put into variables (myCommand and myQuery) by accessing the process.argv array.  
